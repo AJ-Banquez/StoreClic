@@ -15,61 +15,123 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-    <header class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+            <div class="flex items-center space-x-2 lg:flex-1">
+                <a class="flex items-center text-slate-900" href="/">
+                    <img class="h-6 w-auto" src="/assents/img/store-svgrepo-com.svg" alt="Logo">
+                    <h1 class="flex items-center text-2xl font-extrabold dark:text-white">Jrafa</h1>
                 </a>
             </div>
+
             <!-- Botón para abrir menú en móvil -->
             <div class="flex lg:hidden">
-                <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                    <span class="sr-only">Abrir menú principal</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Abrir menú</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
-            <!-- Menú de navegación principal en escritorio -->
-            <div class="hidden lg:flex lg:gap-x-12">
-                <div class="relative">
-                    <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
-                        Product
-                    </button>
-                </div>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex lg:gap-x-6">
+                <a href="Productos.html" class="text-sm font-semibold leading-6 text-gray-900">Productos</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Ofertas</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Favoritos</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Compañia</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>
-        <!-- Menú móvil, se muestra/oculta basado en el estado del botón -->
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                    <span class="sr-only">Jrafa</span>
+                    <img class="h-8 w-auto" src="/assents/img/store-svgrepo-com.svg" alt="Logo">
                 </a>
                 <button id="close-mobile-menu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Cerrar menú</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
             <div class="mt-6">
-                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900 mb-4">Product</a>
-                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900 mb-4">Features</a>
-                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900 mb-4">Marketplace</a>
-                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900">Company</a>
+                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900 mb-4">Productos</a>
+                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900 mb-4">Ofertas</a>
+                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900 mb-4">Favoritos</a>
+                <a href="#" class="block text-lg font-semibold leading-6 text-gray-900">Compañia</a>
             </div>
         </div>
     </header>
 
+    <!-- Banner Section -->
+    <section class="bg-blue-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">¡Oferta Exclusiva!</h2>
+                <p class="mt-4 text-lg text-gray-500">Compra ahora y recibe hasta un 30% de descuento en productos seleccionados.</p>
+                <div class="mt-8 flex justify-center">
+                    <a href="#" class="px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700">Ver Productos</a>
+                    <a href="#" class="ml-4 px-8 py-3 bg-white text-blue-600 text-lg font-semibold rounded-md hover:bg-gray-100">Saber Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <div class="carrosuel">
+    
+
+<div id="controls-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-5 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://www.zonamovilidad.es/fotos/2/32679_prueba-poco-f6-pro-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="https://files.lafm.com.co/assets/public/styles/16x9/public/2024-05/xiaomi_poco_f6_pro.jpg?VersionId=LPxSB29MLSxAnpR4XPfRNuq7hOVr6oRE&itok=-iyx4Tfg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://phantom-elmundo.unidadeditorial.es/ce1b13398c20f95888976b51b828e753/resize/1200/f/webp/assets/multimedia/imagenes/2023/06/16/16869010428768.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+   </div>
+    <!-- Script para menú móvil -->
     <script>
         // Abrir menú móvil
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
